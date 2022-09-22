@@ -1,0 +1,167 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    list-style: none;
+    }
+    
+    /* ---header--- */ 
+header{
+        background-color: rgb(187, 59, 59);
+        color: white;
+        padding: 15px;
+    
+        display: flex;
+        justify-content: space-between;
+    }
+nav{
+        width: 50%;
+    }
+ul{
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+
+
+ /*----CSS BANDA---*/
+/* --- main de la banda ---*/
+.integrantes{
+    background-color: rgb(193, 205, 216);
+}
+.main__banda{
+   text-align: center;
+}
+.img__integrantes{
+    width: 500px;
+}
+
+.tabla__banda{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: left;
+}
+th, td{
+    border:  solid 2px black;
+}
+
+
+/* --- CSS MERCADERIA ---*/
+
+
+.main__mercaderia{
+    background-color: wheat;
+    text-align: center;
+    height: 100%;
+}
+
+.main__mercaderia h2{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-columns:  auto auto;
+    grid-template-rows:  auto auto auto;
+    
+
+    width: 100%;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    padding: 20px; 
+    border: 1px solid black;
+}
+
+.tarjeta__mercaderia{
+  
+   border: 4px solid black;
+   background-color: lightblue;
+   height: 20vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+}
+.tarjeta__mercaderia h3{
+    font-size: 1.6em;
+    padding: 10px 15px;
+   
+}
+
+.c0{
+
+    grid-column: 1/3;
+    text-align: center;
+    align-items: center; 
+    padding-top: 35px;
+    
+}
+
+.boton{
+   background-color: rgba(185, 47, 47, 0.923);
+   color: white;
+   padding: 10px 15px;
+   display: inline-block;
+   text-decoration: none;
+   border-radius: 15px;
+   margin-top: 10px;
+}
+.boton:hover{
+    background-color: grey;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+
+
+/* --- CSS SHOWS ---*/
+.main__show{
+    text-align: center;
+    background-color: gainsboro;
+
+    }
+    .caja{
+        display: grid;
+    grid-template-columns:  100%;
+    grid-template-rows:  25% 25% 25% 25%;
+    
+
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: rgba(166, 152, 43, 0.361);
+    padding: 20px; 
+    border: 1px solid black;
+    }
+   
+ 
+    .caja__show{
+border: 2px solid black;
+    }
+   
+
+
+/* --- CSS CONTACTO ---*/
+
+----
+    /*----footer---*/
+    .footer{
+        background-color: rgb(187, 59, 59);
+        width: auto;
+        text-align: center;
+    }
+    
+    .titulo__footer{
+        background-color:  rgb(187, 59, 59);
+        color: white;
+        text-align: center;
+        font-size: 2rem;
+    }

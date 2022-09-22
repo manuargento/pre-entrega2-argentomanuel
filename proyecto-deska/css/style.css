@@ -1,0 +1,106 @@
+*{
+margin: 0px;
+padding: 0px;
+box-sizing: border-box;
+list-style: none;
+}
+
+/* ---header--- */ 
+header{
+    background-color: rgb(187, 59, 59);
+    color: white;
+    padding: 15px;
+
+    display: flex;
+    justify-content: space-between;
+}
+nav{
+    width: 50%;
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+}
+/* --- main de la pagina principal!!! ---*/
+.inicio{
+    min-height: 85vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/foto\ de\ la\ banda\ para\ fondo.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+.titulo__inicio{
+    color: white;
+   text-align: center;
+   align-items: center;  
+   background-color: rgba(139, 0, 0, 0.337);
+   padding: 20px;
+   border-radius: 20px;
+}
+.titulo__inicio h2{
+    font-size: 3rem;
+}
+.titulo__inicio h3{
+    font-size: 2.3rem;
+    font-weight: 100;
+}
+/*----INTEGRANTES---*/
+.Integrantes{
+    display: flex;
+    text-align: center;
+}
+.integrantes__titulo{
+    background-color: brown;
+    padding: 20px;
+   
+}
+/*
+.tarjeta__Integrantes{
+    width: 300px;
+    height: 350px;
+    border-style: solid black;
+    color: white;
+    background-color: transparent;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    border: 2px solid white;
+}*/
+
+ 
+.img__Integrantes{
+    width: 95%;
+}
+
+
+/* --- FOOTER ---*/
+.footer{
+    background-color: rgb(187, 59, 59);
+    width: auto;
+    height: 250px;
+    text-align: center;
+}
+
+.titulo__footer{
+    background-color: rgb(6, 7, 7);
+    color: white;
+    text-align: center;
+    font-size: 2rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
