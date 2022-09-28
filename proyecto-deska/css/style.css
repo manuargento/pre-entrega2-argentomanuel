@@ -3,6 +3,7 @@ margin: 0px;
 padding: 0px;
 box-sizing: border-box;
 list-style: none;
+text-decoration: none;
 }
 
 /* ---header--- */ 
@@ -16,14 +17,40 @@ header{
 }
 nav{
     width: 50%;
+    padding-top: 10px;
+    border:2px solid black;
+    border-radius: 4px;
+    background-color: white;
+    color: black;
 }
 ul{
     display: flex;
     justify-content: space-around;
+   gap: 5px;
 }
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav{
+
+        width: 100%;
+        justify-content: space-around;
+        padding-left: 10%;
+        padding-right: 10%;
+    }
+    
+}
+
+
+
+
 /* --- main de la pagina principal!!! ---*/
 .inicio{
-    min-height: 85vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,49 +75,264 @@ ul{
     font-size: 2.3rem;
     font-weight: 100;
 }
-/*----INTEGRANTES---*/
+@media screen and (max-width: 768px) {
+    .inicio{
+        background-position: 50%;
+    }
+    
+}
+
+/*---- slider INTEGRANTES---*/
 .Integrantes{
     display: flex;
-    text-align: center;
+
 }
 .integrantes__titulo{
-    background-color: brown;
-    padding: 20px;
-   
+  
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color:  rgb(187, 59, 59);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    text-align: center;
+    font-size: 2rem;
+
 }
-/*
-.tarjeta__Integrantes{
-    width: 300px;
+
+.slider-integrantes{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+
+.tarjeta__integrante{
+    min-width: 300px;
     height: 350px;
-    border-style: solid black;
-    color: white;
-    background-color: transparent;
+
+    border: 2px solid black; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    display: flex;
     justify-content: space-around;
     align-items: center;
-    text-align: center;
-    border: 2px solid white;
-}*/
-
- 
-.img__Integrantes{
-    width: 95%;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(255, 0, 0, 0.686);
+    cursor: default;
+    transition: all 400ms ease;
 }
+
+.tarjeta__integrante:hover{
+    box-shadow: 5px 5px 20px rgb(53, 51, 51);
+    transform: translateY(-3%);
+}
+
+.tarjeta__titulo{
+font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+}
+
+.tarjeta__img{
+    width: 100%;
+}
+.tarjeta__integrante p{
+    line-height: 1.5;
+    color: rgb(58, 58, 58);
+    margin-left: 10px;
+}
+
+@media screen and (max-width: 768px) {
+    
+    .slider-integrantes{
+        display: flex;
+        overflow-x: scroll;
+    }
+}
+/* ------ BANDA ----*/
+/* --- main de la banda ---*/
+.integrantes{
+    background-color: rgb(193, 205, 216);
+}
+.main__banda{
+   text-align: center;
+}
+.img__integrantes{
+    width: 500px;
+}
+
+.tabla__banda{
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: left;
+}
+th, td{
+    border:  solid 2px black;
+}
+
+
+
+
+/* --- CSS MERCADERIA ---*/
+
+main{
+   
+    text-align: center;
+    height: 100%;
+}
+
+.titulo-mercaderia{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(169, 41, 41);
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.grid-layout{
+    display: grid;
+    grid-template-columns:  auto auto;
+    grid-template-rows:  auto auto auto;
+    
+
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1100px;
+    padding: 20px; 
+    border: 1px solid black;
+    gap: 20px 20px;
+}
+
+.tarjeta__mercaderia{
+  
+   border: 2px solid black;
+   border-radius: 6px;
+   background-color: rgb(216, 221, 223);
+   height: 20vh;
+   display: flex;
+   flex-direction: column;
+   justify-content: space-around;
+   align-items: center;
+   overflow: hidden;
+   box-shadow: 0px 1px 10px rgba(112, 110, 110, 0.686);
+   cursor: default;
+   transition: all 400ms ease;
+}
+.tarjeta__mercaderia:hover{
+    box-shadow: 5px 5px 20px rgb(53, 51, 51);
+    transform: translateY(-3%);
+}
+
+.tarjeta__mercaderia h3{
+    font-size: 1.6em;
+    padding: 10px 15px;
+   font-weight: 400;
+   margin-bottom: 10px;
+}
+.tarjeta__mercaderia p{
+    line-height: 1.5;
+    color: rgb(58, 58, 58);
+}
+.boton{
+    background-color: rgba(220, 34, 34, 0.923);
+    color: rgb(255, 255, 255);
+    padding: 10px 15px;
+    display: inline-block;
+    text-decoration: none;
+    border: black;
+    border-radius: 4px;
+    margin-top: 10px;
+    transition: all 400ms ease;
+ }
+ .boton:hover{
+     background-color: rgba(51, 51, 51, 0.657);
+     color: rgb(255, 255, 255);
+ }
+ 
+.c0{
+
+    grid-column: 1/3;
+    text-align: center;
+    align-items: center; 
+    padding-top: 35px;
+    background-image: url(/proyecto-deska/img/laremequeva.jpg);
+    
+}
+@media screen and (max-width: 768px) {
+    
+    .grid-layout{
+        display: grid;
+        grid-template-columns: 100%;
+        grid-template-rows: auto;
+      
+       
+    }
+    .tarjeta__mercaderia{
+  
+        
+        height: 20vh;
+        display: flex;
+        flex-direction: column;
+        grid-column: auto;
+     }
+   
+}
+/* --- CSS SHOWS ---*/
+.main__show{
+    text-align: center;
+    background-color: gainsboro;
+
+    }
+    .caja{
+        display: grid;
+    grid-template-columns:  100%;
+    grid-template-rows:  25% 25% 25% 25%;
+    
+
+    width: 100%;
+    height: 60vh;
+    margin: 0 auto;
+    background-color: rgba(166, 152, 43, 0.361);
+    padding: 20px; 
+    border: 1px solid black;
+    }
+   
+ 
+    .caja__show{
+border: 2px solid black;
+    }
+   
+/* --- CSS CONTACTO ---*/
+
+
 
 
 /* --- FOOTER ---*/
+.titulo__footer{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(255, 255, 255);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding-top: 5px;
+    background-color:  rgb(187, 59, 59);
+    text-align: center;
+    font-size: 2rem;
+}
+
 .footer{
     background-color: rgb(187, 59, 59);
     width: auto;
     height: 250px;
     text-align: center;
+ 
+ }
+.iconos{
+   
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+   
 }
 
-.titulo__footer{
-    background-color: rgb(6, 7, 7);
-    color: white;
-    text-align: center;
-    font-size: 2rem;
-}
+ 
+
 
 
 
