@@ -1,0 +1,163 @@
+     /* ------ BANDA Pantalla dividida ----*/
+     .pantalla-dividida{
+        display: flex;
+        &__izquierda{
+            background: rgba(235, 235, 235, 0.951);
+            width: 50%;
+            height: 100vh;
+        }
+        &__derecha{
+            background: url(../img/galeria/imagenremasterizada/Fondo01.jpg);
+            background-size: cover;
+            background-position: center;
+            width: 50%;
+        }
+        &__titulo{
+            font-size: 70px;
+            padding: 5px;
+            margin-bottom: 5px;
+            margin-top: 30%;
+            text-align: center;
+        }
+        &__subtitulo{
+            color: rgb(169, 41, 41);
+            font-size: 90px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        &__p{
+            font-size: 25px;
+            line-height: 30px;
+            text-align: center;
+            margin: 15px;
+            color:  rgba(58, 58, 58, 0.874);
+        }
+        &__link{
+            text-align: center;
+        }
+        &__boton{
+            color: rgba(42, 42, 42, 0.873);
+            border: 3px solid rgba(4, 4, 4, 0.69);
+            padding: 20px;
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 1.5em;
+            display: inline-block;
+            margin-top: 30px;
+            &:hover{
+                background-color: rgba(214, 19, 19, 0.657);
+                color: rgb(255, 255, 255);
+            }
+        }
+    }
+    
+
+
+    /* ------ BANDA seccion 2 ----*/
+
+   .banda{
+    &__titulo{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(169, 41, 41);
+        font-size: 2em;
+        margin-bottom: 5px;
+        margin-top: 20px;
+    }
+    &__contenedor{
+        display: flex;
+        display: grid;
+        flex-direction: column;
+        gap: 20px 20px;
+        padding: 20px;
+        max-width: 1100px;
+        margin: 0 auto;
+        width: 100%;
+        text-align: center;
+        height: 100%;
+        
+    }
+    &__subtitulo{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color: rgb(70, 68, 68);
+        font-size: 30px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+    &__tarjeta{
+        background-color: rgb(255, 255, 255);
+        min-width: 300px; 
+        border-radius: 6px;
+        margin: 8px;
+        padding: 7px;
+        align-items: center;
+        overflow: hidden;
+        box-shadow: 0px 1px 10px rgba(93, 92, 92, 0.734);
+        cursor: default;
+        transition: all 400ms ease;
+        & p{
+            font-size: 1.5em;
+            padding: 5px;
+            margin: 5px;
+            text-align: initial;
+            color:  rgba(58, 58, 58, 0.874);
+        }
+    }
+ }
+ 
+
+@media (max-width: 1400px){
+    .pantalla-dividida{
+        flex-direction: row;
+        &__izquierda{
+            width: 100%;
+        }
+        &__derecha{
+            width: 0%;
+        }
+    } 
+}
+@media (max-width: 1399px){
+    .pantalla-dividida__izquierda{
+        background: url(../img/galeria/imagenremasterizada/Fondo01.jpg);
+        background-size: cover;
+        background-position: center;
+    }
+    .pantalla-dividida__titulo{
+       color: white;
+       font-size: 70px;
+       padding: 20px;
+       margin-bottom: 15px;
+       margin-top: 10%;
+       text-align: center;
+    }
+    .pantalla-dividida__subtitulo {
+    color: white;
+    font-size: 100px;
+    margin-bottom: 50px;
+    }
+    .pantalla-dividida__p {    
+    color: white;
+    font-size: 30px;
+    line-height: 45px;
+    }
+    .pantalla-dividida__boton {
+        color: white;
+        border-color: white;
+        padding: 20px;
+        margin-top: 50px;
+        margin-bottom: 25px;
+    }
+    .banda p{
+        font-size: 25px;
+        padding: 0px;
+        margin: 5px;
+    }
+    }
+@media (max-width: 600px){
+        .pantalla-dividida__izquierda{
+        height: 100%;
+        }
+    }
+
+

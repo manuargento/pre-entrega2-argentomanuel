@@ -1,0 +1,52 @@
+/* --- FOOTER ---*/
+
+.footer{
+  background:  rgb(169, 41, 41);
+}
+
+.footer__titulo{ 
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 30px;
+}
+.redes-sociales{
+  text-align: center;
+  padding: 8px;
+  font-size: 50px;
+}
+ .redes-sociales a{
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+}
+.redes-sociales a:hover{
+    color: #24262b;
+}
+
+@media (max-width: 767px){
+  .redes-sociales{
+    text-align: center;
+    padding: 8px;
+    font-size: 25px;
+  }
+  .redes-sociales a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+  }
+}

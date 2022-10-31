@@ -1,348 +1,691 @@
-*{
-margin: 0px;
-padding: 0px;
-box-sizing: border-box;
-list-style: none;
-text-decoration: none;
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
 }
 
-/* ---header--- */ 
-header{
-    background-color: rgb(187, 59, 59);
-    color: white;
-    padding: 15px;
-
-    display: flex;
-    justify-content: space-between;
-}
-nav{
-    width: 50%;
-    padding-top: 10px;
-    border:2px solid black;
-    border-radius: 4px;
-    background-color: white;
-    color: black;
-}
-ul{
-    display: flex;
-    justify-content: space-around;
-   gap: 5px;
+body {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-@media screen and (max-width: 768px) {
-    header {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    nav{
-
-        width: 100%;
-        justify-content: space-around;
-        padding-left: 10%;
-        padding-right: 10%;
-    }
-    
+html {
+  height: 100%;
 }
 
-
-
-
-/* --- main de la pagina principal!!! ---*/
-.inicio{
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: url(../img/foto\ de\ la\ banda\ para\ fondo.jpg);
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: cover;
+/* ---HEADER--- */
+header {
+  background-color: rgb(187, 59, 59);
+  color: white;
+  padding: 20px;
+  font-family: "Fruktur", cursive;
+  display: flex;
+  justify-content: space-between;
 }
 
-.titulo__inicio{
-    color: white;
-   text-align: center;
-   align-items: center;  
-   background-color: rgba(139, 0, 0, 0.337);
-   padding: 20px;
-   border-radius: 20px;
-}
-.titulo__inicio h2{
-    font-size: 3rem;
-}
-.titulo__inicio h3{
-    font-size: 2.3rem;
-    font-weight: 100;
-}
-@media screen and (max-width: 768px) {
-    .inicio{
-        background-position: 50%;
-    }
-    
+nav {
+  width: 50%;
+  padding-top: 10px;
+  border: 2px solid black;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
 }
 
-/*---- slider INTEGRANTES---*/
-.Integrantes{
-    display: flex;
-
+ul {
+  display: flex;
+  justify-content: space-around;
+  gap: 4px;
+  font-weight: 600;
+  font-size: 20px;
 }
-.integrantes__titulo{
-  
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color:  rgb(187, 59, 59);
-    margin-top: 10px;
-    margin-bottom: 5px;
+
+a {
+  color: black;
+}
+
+@media screen and (max-width: 900px) {
+  header {
+    flex-direction: column;
     text-align: center;
-    font-size: 2rem;
-
+  }
+  ul {
+    font-size: 16px;
+  }
+  nav {
+    width: 100%;
+    justify-content: space-around;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+/* --- PAGINA PRINCIPAL ---*/
+.inicio {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url(../img/galeria/galegaleria/Fondo13.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: 50%;
 }
 
-.slider-integrantes{
-    padding: 10px;
+.titulo__inicio {
+  color: white;
+  text-align: center;
+  align-items: center;
+  background-color: rgba(139, 0, 0, 0.337);
+  padding: 20px;
+  border-radius: 20px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.titulo__inicio h2 {
+  font-size: 3rem;
+}
+.titulo__inicio h3 {
+  font-size: 2.3rem;
+  font-weight: 100;
+}
+
+/*---- SLIDER INTEGRANTES---*/
+.integrantes {
+  display: flex;
+  flex-direction: column;
+}
+.integrantes__titulo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(187, 59, 59);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.slider-integrantes {
+  padding: 10px;
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+}
+
+.tarjeta-integrante {
+  margin-top: 15px;
+  min-width: 300px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 1px 10px rgba(255, 0, 0, 0.686);
+  cursor: default;
+  transition: all 400ms ease;
+}
+.tarjeta-integrante p {
+  line-height: 1.5;
+  color: rgb(58, 58, 58);
+  margin: 10px;
+}
+.tarjeta-integrante:hover {
+  box-shadow: 5px 5px 20px rgb(180, 17, 17);
+  transform: translateY(-3%);
+}
+.tarjeta-integrante__titulo {
+  font-size: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.tarjeta-integrante__img {
+  width: 100%;
+  height: 200px;
+}
+
+@media screen and (max-width: 768px) {
+  .slider-integrantes {
     display: flex;
-    gap: 10px;
-    overflow-x: auto;
+    overflow-x: scroll;
+  }
+}
+/* ------ BANDA Pantalla dividida ----*/
+.pantalla-dividida {
+  display: flex;
+}
+.pantalla-dividida__izquierda {
+  background: rgba(235, 235, 235, 0.951);
+  width: 50%;
+  height: 100vh;
+}
+.pantalla-dividida__derecha {
+  background: url(../img/galeria/imagenremasterizada/Fondo01.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 50%;
+}
+.pantalla-dividida__titulo {
+  font-size: 70px;
+  padding: 5px;
+  margin-bottom: 5px;
+  margin-top: 30%;
+  text-align: center;
+}
+.pantalla-dividida__subtitulo {
+  color: rgb(169, 41, 41);
+  font-size: 90px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.pantalla-dividida__p {
+  font-size: 25px;
+  line-height: 30px;
+  text-align: center;
+  margin: 15px;
+  color: rgba(58, 58, 58, 0.874);
+}
+.pantalla-dividida__link {
+  text-align: center;
+}
+.pantalla-dividida__boton {
+  color: rgba(42, 42, 42, 0.873);
+  border: 3px solid rgba(4, 4, 4, 0.69);
+  padding: 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1.5em;
+  display: inline-block;
+  margin-top: 30px;
+}
+.pantalla-dividida__boton:hover {
+  background-color: rgba(214, 19, 19, 0.657);
+  color: rgb(255, 255, 255);
 }
 
-.tarjeta__integrante{
-    min-width: 300px;
-    height: 350px;
+/* ------ BANDA seccion 2 ----*/
+.banda__titulo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(169, 41, 41);
+  font-size: 2em;
+  margin-bottom: 5px;
+  margin-top: 20px;
+}
+.banda__contenedor {
+  display: flex;
+  display: grid;
+  flex-direction: column;
+  gap: 20px 20px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  height: 100%;
+}
+.banda__subtitulo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(70, 68, 68);
+  font-size: 30px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.banda__tarjeta {
+  background-color: rgb(255, 255, 255);
+  min-width: 300px;
+  border-radius: 6px;
+  margin: 8px;
+  padding: 7px;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 1px 10px rgba(93, 92, 92, 0.734);
+  cursor: default;
+  transition: all 400ms ease;
+}
+.banda__tarjeta p {
+  font-size: 1.5em;
+  padding: 5px;
+  margin: 5px;
+  text-align: initial;
+  color: rgba(58, 58, 58, 0.874);
+}
 
-    border: 2px solid black; 
+@media (max-width: 1400px) {
+  .pantalla-dividida {
+    flex-direction: row;
+  }
+  .pantalla-dividida__izquierda {
+    width: 100%;
+  }
+  .pantalla-dividida__derecha {
+    width: 0%;
+  }
+}
+@media (max-width: 1399px) {
+  .pantalla-dividida__izquierda {
+    background: url(../img/galeria/imagenremasterizada/Fondo01.jpg);
+    background-size: cover;
+    background-position: center;
+  }
+  .pantalla-dividida__titulo {
+    color: white;
+    font-size: 70px;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 10%;
+    text-align: center;
+  }
+  .pantalla-dividida__subtitulo {
+    color: white;
+    font-size: 100px;
+    margin-bottom: 50px;
+  }
+  .pantalla-dividida__p {
+    color: white;
+    font-size: 30px;
+    line-height: 45px;
+  }
+  .pantalla-dividida__boton {
+    color: white;
+    border-color: white;
+    padding: 20px;
+    margin-top: 50px;
+    margin-bottom: 25px;
+  }
+  .banda p {
+    font-size: 25px;
+    padding: 0px;
+    margin: 5px;
+  }
+}
+@media (max-width: 600px) {
+  .pantalla-dividida__izquierda {
+    height: 100%;
+  }
+}
+/* --- MERCADERIA ---*/
+.mercaderia {
+  text-align: center;
+  height: 100%;
+}
+.mercaderia__titulo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(169, 41, 41);
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+.mercaderia__grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px;
+  gap: 20px 20px;
+}
+.mercaderia__tarjeta {
+  display: flex;
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: white;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  overflow: hidden;
+  box-shadow: 0px 1px 10px rgba(112, 110, 110, 0.686);
+  cursor: default;
+  transition: all 400ms ease;
+}
+.mercaderia__tarjeta:hover {
+  box-shadow: 5px 5px 20px rgb(53, 51, 51);
+  transform: translateY(-3%);
+}
+.mercaderia__tarjeta h3 {
+  font-size: 1.6em;
+  padding: 10px 15px;
+  font-weight: 400;
+  margin-bottom: 10px;
+  color: rgb(51, 51, 51);
+}
+.mercaderia__tarjeta p {
+  line-height: 1.5;
+  color: rgba(58, 58, 58, 0.874);
+}
+
+.tarjeta__img {
+  width: 100%;
+  height: 200px;
+}
+
+.boton {
+  background-color: rgba(220, 34, 34, 0.923);
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  display: inline-block;
+  text-decoration: none;
+  border: black;
+  border-radius: 4px;
+  margin: 10px;
+  transition: all 400ms ease;
+}
+.boton:hover {
+  background-color: rgba(51, 51, 51, 0.657);
+  color: rgb(255, 255, 255);
+}
+
+.c0 {
+  grid-column: 1/3;
+  height: 20vh;
+  align-items: center;
+  padding-top: 35px;
+  color: rgba(30, 30, 30, 0.887);
+  background-image: url(/proyecto-deska/img/laremequeva.jpg);
+  font-size: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .mercaderia__grid {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+  }
+  .mercaderia__tarjeta {
     display: flex;
     flex-direction: column;
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    overflow: hidden;
-    box-shadow: 0px 1px 10px rgba(255, 0, 0, 0.686);
-    cursor: default;
-    transition: all 400ms ease;
+    grid-column: auto;
+  }
+}
+/* --- CSS GALERIA ---*/
+.galeria-titulo {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  color: rgb(187, 59, 59);
+  margin-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 2rem;
 }
 
-.tarjeta__integrante:hover{
-    box-shadow: 5px 5px 20px rgb(53, 51, 51);
-    transform: translateY(-3%);
+.galeria-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 150px;
+  padding: 20px;
+  grid-gap: 10px;
 }
 
-.tarjeta__titulo{
-font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif
+.galeria__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.tarjeta__img{
-    width: 100%;
-}
-.tarjeta__integrante p{
-    line-height: 1.5;
-    color: rgb(58, 58, 58);
-    margin-left: 10px;
+.galeria__item:nth-child(4) {
+  grid-column-start: span 2;
 }
 
-@media screen and (max-width: 768px) {
-    
-    .slider-integrantes{
-        display: flex;
-        overflow-x: scroll;
-    }
-}
-/* ------ BANDA ----*/
-/* --- main de la banda ---*/
-.integrantes{
-    background-color: rgb(193, 205, 216);
-}
-.main__banda{
-   text-align: center;
-}
-.img__integrantes{
-    width: 500px;
+.galeria__item:nth-child(5) {
+  grid-row-start: span 2;
 }
 
-.tabla__banda{
-    background-color: rgb(255, 255, 255);
-    width: 100%;
-    text-align: left;
-}
-th, td{
-    border:  solid 2px black;
+.galeria__item:nth-child(9) {
+  grid-column-start: span 2;
 }
 
-
-
-
-/* --- CSS MERCADERIA ---*/
-
-main{
-   
-    text-align: center;
-    height: 100%;
+.galeria__item:nth-child(10) {
+  grid-row-start: span 2;
 }
 
-.titulo-mercaderia{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(169, 41, 41);
-    margin-top: 10px;
+.galeria__item:nth-child(13) {
+  grid-column-start: span 2;
+}
+
+@media (max-width: 580px) {
+  .galeria-container {
+    grid-template-columns: repeat(2, 1fr);
     margin-bottom: 5px;
-}
-
-.grid-layout{
-    display: grid;
-    grid-template-columns:  auto auto;
-    grid-template-rows:  auto auto auto;
-    
-
-    width: 100%;
-    margin: 0 auto;
-    max-width: 1100px;
-    padding: 20px; 
-    border: 1px solid black;
-    gap: 20px 20px;
-}
-
-.tarjeta__mercaderia{
-  
-   border: 2px solid black;
-   border-radius: 6px;
-   background-color: rgb(216, 221, 223);
-   height: 20vh;
-   display: flex;
-   flex-direction: column;
-   justify-content: space-around;
-   align-items: center;
-   overflow: hidden;
-   box-shadow: 0px 1px 10px rgba(112, 110, 110, 0.686);
-   cursor: default;
-   transition: all 400ms ease;
-}
-.tarjeta__mercaderia:hover{
-    box-shadow: 5px 5px 20px rgb(53, 51, 51);
-    transform: translateY(-3%);
-}
-
-.tarjeta__mercaderia h3{
-    font-size: 1.6em;
-    padding: 10px 15px;
-   font-weight: 400;
-   margin-bottom: 10px;
-}
-.tarjeta__mercaderia p{
-    line-height: 1.5;
-    color: rgb(58, 58, 58);
-}
-.boton{
-    background-color: rgba(220, 34, 34, 0.923);
-    color: rgb(255, 255, 255);
-    padding: 10px 15px;
-    display: inline-block;
-    text-decoration: none;
-    border: black;
-    border-radius: 4px;
-    margin-top: 10px;
-    transition: all 400ms ease;
- }
- .boton:hover{
-     background-color: rgba(51, 51, 51, 0.657);
-     color: rgb(255, 255, 255);
- }
- 
-.c0{
-
+  }
+  .galeria__item:nth-child(4) {
     grid-column: 1/3;
-    text-align: center;
-    align-items: center; 
-    padding-top: 35px;
-    background-image: url(/proyecto-deska/img/laremequeva.jpg);
-    
+    grid-row: 2/4;
+  }
+  .galeria__item:nth-child(7) {
+    grid-column: 2/3;
+    grid-row: 7/8;
+  }
+  .galeria__item:nth-child(8) {
+    grid-column: 1/3;
+    grid-row: 6/7;
+  }
+  .galeria__item:nth-child(10) {
+    grid-column: 1/2;
+    grid-row: 7/9;
+  }
+  .galeria__item:nth-child(11) {
+    grid-column: 1/3;
+    grid-row: 10/12;
+  }
+  .galeria__item:nth-child(12) {
+    grid-column: 2/3;
+    grid-row: 8/9;
+  }
 }
-@media screen and (max-width: 768px) {
-    
-    .grid-layout{
-        display: grid;
-        grid-template-columns: 100%;
-        grid-template-rows: auto;
-      
-       
-    }
-    .tarjeta__mercaderia{
-  
-        
-        height: 20vh;
-        display: flex;
-        flex-direction: column;
-        grid-column: auto;
-     }
-   
+@media (min-width: 768px) {
+  .galeria-container {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .galeria__item:nth-child(2) {
+    grid-column-start: span 2;
+  }
+  .galeria__item:nth-child(4) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .galeria__item:nth-child(8) {
+    grid-column-start: span 2;
+  }
+  .galeria__item:nth-child(9) {
+    grid-column-start: span 3;
+    grid-row-start: span 2;
+  }
+  .galeria__item:nth-child(10) {
+    grid-row-start: span 2;
+  }
+  .galeria__item:nth-child(13) {
+    grid-column-start: span 2;
+  }
 }
-/* --- CSS SHOWS ---*/
-.main__show{
-    text-align: center;
-    background-color: gainsboro;
+@media (min-width: 1024px) {
+  .galeria-container {
+    grid-template-columns: repeat(5, 1fr);
+    width: 90%;
+    margin: auto;
+  }
+  .galeria__item:nth-child(1) {
+    grid-row-start: span 2;
+  }
+  .galeria__item:nth-child(2) {
+    grid-column-start: span 2;
+    grid-row-start: span 2;
+  }
+  .galeria__item:nth-child(3) {
+    grid-column: 4/6;
+    grid-row: 1/3;
+  }
+  .galeria__item:nth-child(4) {
+    grid-column: 1/4;
+    grid-row: 3/6;
+  }
+  .galeria__item:nth-child(5) {
+    grid-column: 4/5;
+    grid-row: 3/6;
+  }
+  .galeria__item:nth-child(6) {
+    grid-column: 5/6;
+    grid-row: 3/5;
+  }
+  .galeria__item:nth-child(8) {
+    grid-column: 2/4;
+    grid-row: 6/8;
+  }
+  .galeria__item:nth-child(9) {
+    grid-column: 4/6;
+    grid-row: 6/8;
+  }
+  .galeria__item:nth-child(10) {
+    grid-row-start: span 3;
+  }
+  .galeria__item:nth-child(11) {
+    grid-column: 2/4;
+    grid-row: 8/10;
+  }
+  .galeria__item:nth-child(12) {
+    grid-column: 1/2;
+    grid-row: 9/10;
+  }
+  .galeria__item:nth-child(13) {
+    grid-column: 4/6;
+    grid-row: 8/10;
+  }
+}
+/*-------PAGINA DE CONTACTO-------*/
+.contacto {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: #e8e6f7;
+  opacity: 0.8;
+  background-image: radial-gradient(#ff0000 0.45px, #e8e6f7 0.45px);
+  background-size: 9px 9px;
+  background-position: 0 0, 10px 10px;
+  min-height: 100vh;
+}
+.contacto__titulo {
+  color: rgb(169, 41, 41);
+  text-align: center;
+  font-size: 2em;
+  margin-bottom: 30px;
+  padding-top: 5px;
+}
 
-    }
-    .caja{
-        display: grid;
-    grid-template-columns:  100%;
-    grid-template-rows:  25% 25% 25% 25%;
-    
-
-    width: 100%;
-    height: 60vh;
-    margin: 0 auto;
-    background-color: rgba(166, 152, 43, 0.361);
-    padding: 20px; 
-    border: 1px solid black;
-    }
-   
- 
-    .caja__show{
-border: 2px solid black;
-    }
-   
-/* --- CSS CONTACTO ---*/
-
-
-
+.formulario {
+  background-color: white;
+  margin: auto;
+  width: 90%;
+  max-width: 600px;
+  padding: 4.5em 3em;
+  border-radius: 3px;
+  box-shadow: 0 5px 10px -5px;
+  color: rgba(0, 0, 0, 0.784);
+  text-align: center;
+}
+.formulario__titulo {
+  font-size: 2rem;
+  margin-bottom: 0.5em;
+}
+.formulario p {
+  font-weight: 300;
+  color: rgba(14, 13, 13, 0.912);
+}
+.formulario__contenedor {
+  margin-top: 3em;
+  display: grid;
+  gap: 2.5em;
+}
+.formulario__grupo {
+  position: relative;
+  color: rgba(64, 64, 64, 0.923);
+}
+.formulario__input {
+  width: 100%;
+  background: none;
+  color: rgba(107, 105, 105, 0.923);
+  font-size: 1rem;
+  padding: 0.6em 0.3em;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+.formulario__label {
+  cursor: text;
+  position: relative;
+  top: 0;
+  left: 5px;
+  transform: translateY(10px);
+  transition: transform 0.5s, color, 3s;
+}
+.formulario__submit {
+  background: rgb(169, 41, 41);
+  color: white;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  font-weight: 300;
+  font-size: 1rem;
+  padding: 0.8em 0;
+  border: none;
+  border-radius: 0.5em;
+}
+.formulario__linea {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: rgb(169, 41, 41);
+}
 
 /* --- FOOTER ---*/
-.titulo__footer{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-    color: rgb(255, 255, 255);
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding-top: 5px;
-    background-color:  rgb(187, 59, 59);
-    text-align: center;
-    font-size: 2rem;
+.footer {
+  background: rgb(169, 41, 41);
 }
 
-.footer{
-    background-color: rgb(187, 59, 59);
-    width: auto;
-    height: 250px;
-    text-align: center;
- 
- }
-.iconos{
-   
-    padding: 20px;
-    display: flex;
-    justify-content: space-around;
-   
+.footer__titulo {
+  color: white;
+  padding-top: 10px;
+  margin-bottom: 5px;
+  text-align: center;
+  font-size: 30px;
 }
 
- 
+.redes-sociales {
+  text-align: center;
+  padding: 8px;
+  font-size: 50px;
+}
 
+.redes-sociales a {
+  display: inline-block;
+  height: 60px;
+  width: 60px;
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: white;
+  transition: all 0.5s ease;
+}
 
+.redes-sociales a:hover {
+  color: #24262b;
+}
 
+@media (max-width: 767px) {
+  .redes-sociales {
+    text-align: center;
+    padding: 8px;
+    font-size: 25px;
+  }
+  .redes-sociales a {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin: 0 10px 10px 0;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: white;
+    transition: all 0.5s ease;
+  }
+}
 
-
-
-
-
-
-
-
-
-
-
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,90 @@
+
+ /* --- PAGINA PRINCIPAL ---*/
+ .inicio{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url(../img/galeria/galegaleria/Fondo13.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 50%;
+}
+
+.titulo__inicio{
+    color: white;
+   text-align: center;
+   align-items: center;  
+   background-color: rgba(139, 0, 0, 0.337);
+   padding: 20px;
+   border-radius: 20px;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   & h2{
+    font-size: 3rem;
+}
+& h3{
+    font-size: 2.3rem;
+    font-weight: 100;
+ }
+}
+
+
+/*---- SLIDER INTEGRANTES---*/
+.integrantes{
+    display: flex;
+    flex-direction: column;
+    &__titulo{
+        font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        color:  rgb(187, 59, 59);
+        margin-top: 10px;
+        margin-bottom: 5px;
+        text-align: center;
+        font-size: 2rem;
+    }
+}
+.slider-integrantes{
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    overflow-x: auto;
+}
+.tarjeta-integrante{
+    margin-top: 15px;
+    min-width: 300px;
+    border: 2px solid black; 
+    display: flex;
+    flex-direction: column;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    box-shadow: 0px 1px 10px rgba(255, 0, 0, 0.686);
+    cursor: default;
+    transition: all 400ms ease;
+    & p{
+        line-height: 1.5;
+        color: rgb(58, 58, 58);
+        margin: 10px;
+    }
+        &:hover{
+            box-shadow: 5px 5px 20px rgb(180, 17, 17);
+            transform: translateY(-3%); 
+        }
+           &__titulo{
+            font-size: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+           }
+            &__img{
+                 width: 100%;
+                 height: 200px;
+                }     
+}
+
+
+@media screen and (max-width: 768px) {
+    
+    .slider-integrantes{
+        display: flex;
+        overflow-x: scroll;
+    }
+}
