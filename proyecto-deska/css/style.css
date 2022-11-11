@@ -256,6 +256,7 @@ a {
   }
   .pantalla-dividida__izquierda {
     width: 100%;
+    height: 100%;
   }
   .pantalla-dividida__derecha {
     width: 0%;
